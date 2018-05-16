@@ -3,13 +3,52 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<link rel="stylesheet" href="css/cow.css">
-		<style>
-		 .delimiter {
-				 border: 1px solid #CC7536;
-		 }
-		</style>
+		<style>.delimiter {border: 1px solid #CC7536;}</style>
 	</head>
 	<body>
-		
+		<span style="text-align:center;">
+			<br/><br/>
+			<h1>COW</h1>
+			<br/>
+			<p>Cow is a simple, understandable CSS layout</p>
+			<br/>
+			<div class="col-30 row-30" style="border:3px solid #DDD">
+				<br/>
+				<p>30%</p>
+			</div>
+			<div class="col-30 row-40"
+					 style="border:3px solid #999;cursor:pointer;"
+					 id="first"
+					 onmouseup="change();">
+				
+				<p class="col-40 row-full"><br/>40%<br/></p>
+				<p class="col-60 row-full" style="border:3px solid #DDD">Layout horizontally</p>
+				
+			</div>
+			<div class="col-30 row-40 cow-puff"
+					 style="border:3px solid #999;cursor:pointer;"
+					 id="second"
+					 onmouseup="change();">
+
+				<p class="col-40 row-full"><br/>40%<br/></p>
+				<div class="col-60 row-20" style="border:3px solid #DDD">Or</div>
+				<div class="col-60 row-20" style="border:3px solid #DDD">do</div>
+				<div class="col-60 row-20" style="border:3px solid #DDD">it</div>
+				<div class="col-60 row-40" style="border:3px solid #DDD">Vertically</div>
+
+				
+			</div>
+			<div class="col-30 row-30" style="border:3px solid #DDD">
+				<br/>
+				<p>30%</p>
+			</div>
+		</span>
 	</body>
+	<script>
+	 function change() {
+			 document.getElementById("first").classList.toggle("cow-puff");
+			 document.getElementById("second").classList.toggle("cow-puff");
+			 console.log("action");
+	 }
+	</script>
 </html>
